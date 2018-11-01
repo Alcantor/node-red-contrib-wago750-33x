@@ -1,0 +1,50 @@
+<script type="text/javascript">
+	RED.nodes.registerType('wago33x',{
+		category: 'Raspberry Pi',
+		color: "#C7E9C0",
+		defaults: {
+			name:   {value:""},
+			canDev: {value:"can0", required:true},
+			canId:  {value:"1", required:true, validate:RED.validators.number()}
+		},
+		inputs: 1,
+		outputs: 1,
+		icon: "wago.png",
+		label: function() {
+			return this.name || this.chipId || "wago33x";
+		},
+		labelStyle: function() {
+			return this.name ? "node_label_italic" : "";
+		}
+	});
+</script>
+
+<script type="text/x-red" data-template-name="wago33x">
+	<div class="form-row">
+		<label for="node-input-name">
+			<i class="icon-tag"></i>
+			<span> Name/topic</span>
+		</label>
+		<input type="text" id="node-input-name" placeholder="Name">
+	</div>
+	<div class="form-row">
+		<label for="node-input-canDev">
+			<i class="fa fa-ellipsis-v"></i>
+			<span> CAN Device</span>
+		</label>
+		<input type="text" id="node-input-canDev" placeholder="canDev">
+	</div>
+	<div class="form-row">
+		<label for="node-input-canId">
+			<i class="fa fa-ellipsis-v"></i>
+			<span> Node ID</span>
+		</label>
+		<input type="text" id="node-input-canId" placeholder="canId">
+	</div>
+</script>
+
+<script type="text/x-red" data-help-name="wago33x">
+	<p>Control a Wago 750-337/338 PLC (Only 64 digital inputs and 64 digital outputs)</p>
+	<p>msg.payload=['off','on','toggle']</p>
+	<p>msg.index=[0-64]</p>
+</script>
