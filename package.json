@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies" : {
-    "direct-canopen" : "0.0.3"
+  "dependencies": {
+    "node-direct-canopen": "file:../node-direct-canopen"
   },
   "keywords": [
     "node-red",
