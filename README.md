@@ -19,4 +19,5 @@ npm install node-red-contrib-wago750-33x --save
 
 * Set up to 64 digital inputs.
 * Set up to 64 digital outputs.
-* No support for analog signals yet.
+* Set up to 4 analog inputs.
+* Set up to 4 analog outputs.

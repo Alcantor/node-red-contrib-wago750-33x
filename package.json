@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-wago750-33x",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Node-RED node to control the Wago750-337/338 PLC",
   "main": "wago33x.js",
   "scripts": {

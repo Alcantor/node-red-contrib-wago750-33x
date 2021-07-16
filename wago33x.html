@@ -44,7 +44,11 @@
 </script>
 
 <script type="text/x-red" data-help-name="wago33x">
-	<p>Control a Wago 750-337/338 PLC (Only 64 digital inputs and 64 digital outputs)</p>
+	<p>Control a Wago 750-337/338 PLC (Max 64 digital inputs, 64 digital outputs, 4 analog inputs and 4 analog outputs)</p>
+	<h4>Digital IO:</h4>
 	<p>msg.payload=['off','on','toggle']</p>
-	<p>msg.index=[0-64]</p>
+	<p>msg.index=[0-63]</p>
+	<h4>Analog IO:</h4>
+	<p>msg.payload=[0-65535]</p>
+	<p>msg.index=[64-67]</p>
 </script>
